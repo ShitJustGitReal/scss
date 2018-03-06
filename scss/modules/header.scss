@@ -1,0 +1,22 @@
+/***************************
+Header
+***************************/
+
+.header-primary {
+  background: #9B8579;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  @include small-and-above {
+    // clearfix because the header only contains floating elements
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    background: transparent;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+  }
+}

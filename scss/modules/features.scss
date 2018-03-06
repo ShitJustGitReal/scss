@@ -1,0 +1,51 @@
+.feature-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+    span{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        padding: 0.5em;
+        font-size: 1.4em
+    }
+}
+@include small-and-above {
+    .feature-image{
+        img {
+            height: 200px;
+        }
+    }
+}
+
+.feature-image.first {
+    @include feature($green);
+}
+
+.feature-image.second {
+    @include feature($orange);
+}
+
+.feature-image.third {
+    @include feature($light-brown);
+}
+
+.feature-content{
+    line-height: 1.5em;
+    h3{
+        font-size: 1.8em;
+        margin-top: 0;
+        margin-bottom: 0.3em;
+    }
+    p{
+        margin-top: 0;
+    }
+    a:after{
+        content: " >"
+    }
+}

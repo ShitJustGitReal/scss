@@ -1,0 +1,14 @@
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    border-radius: $width/2;
+}
+
+@mixin feature($color){
+    img{
+        border-top: 5px solid $color;
+    }
+    span{
+        background-color: $color;
+    }
+}
